@@ -5,4 +5,12 @@
             display: none;
         }
     }
+
+    @media (max-width: 375px) {
+        &--menu-page {
+            #{$_}__link {
+                font-size: 40px;
+            }
+        }
+    }
 }

@@ -3,4 +3,8 @@
     display: none;
     flex-direction: column;
     margin-top: 65px;
+
+    @media (max-width: 375px) {
+        margin-top: 15px;
+    }
 }

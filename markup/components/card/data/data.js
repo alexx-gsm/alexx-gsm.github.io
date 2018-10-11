@@ -57,6 +57,36 @@ const data = {
             icon: 'go'
         }
     ],
+    portfolioCards: [
+        {
+            title: 'Яндекс',
+            color: 'lightgrey',
+            text:
+                'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
+            meta: ['Архитектура,', 'дизайн,', 'разработка'],
+            link: '/project1.html',
+            icon: 'icon-adapsys.png',
+            png: true
+        },
+        {
+            title: 'Сбербанк',
+            color: 'green-sb',
+            text:
+                'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
+            meta: ['Архитектура,', 'дизайн,', 'разработка'],
+            link: '/project2.html',
+            icon: 'icon-pelican'
+        },
+        {
+            title: 'Waitre POS',
+            color: 'rasberry',
+            text:
+                'Ведущий портал рунета, посвященный каратэ, ММА и единоборствам',
+            meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
+            link: '/project3.html',
+            icon: 'icon-fb'
+        }
+    ],
     vocationCards: [
         {
             type: 'icon',

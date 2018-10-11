@@ -1,14 +1,10 @@
-mixin menu(data)
+mixin menu(data, active)
+
   .menu
     ul.list.list--top-menu
-      li.list__item.is-active
-        a(href='#').list__link Главная
-      li.list__item
-        a(href='#').list__link Портфолио
-      li.list__item
-        a(href='#').list__link Вакансии
-      li.list__item
-        a(href='#').list__link Контакты
+      each item in data
+        li.list__item(class= active === item.title ? 'is-active':'')
+          a(href= item.link).list__link= item.title
     .btn.btn--yellow
       a(href='#').list__link Связаться
     a(href='#')#menu-page-open.menu-btn.menu-btn--open

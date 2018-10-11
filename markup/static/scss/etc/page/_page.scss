@@ -18,6 +18,11 @@
         &-wrap {
             padding-left: 60px;
         }
+        &.blur {
+            opacity: 0.3;
+            -webkit-filter: blur(10px);
+            filter: blur(10px);
+        }
     }
     &__header {
         padding: 30px 0;
