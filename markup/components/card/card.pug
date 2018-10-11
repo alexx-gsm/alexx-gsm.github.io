@@ -9,7 +9,7 @@ mixin card(data)
       unless data.png
         != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})
       else
-        img(src=`%=static=%img/content/${data.icon}` alt="")
+        img(src=`%=static=%img/content/${data.icon}` alt= data.title, title= data.title)
     .card__content
       .card__title= data.title
       .card__meta

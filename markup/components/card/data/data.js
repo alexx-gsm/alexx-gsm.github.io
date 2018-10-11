@@ -65,7 +65,7 @@ const data = {
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
             link: '/project1.html',
-            icon: 'icon-adapsys.png',
+            icon: 'icon-yandex.png',
             png: true
         },
         {
@@ -75,7 +75,7 @@ const data = {
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
             link: '/project2.html',
-            icon: 'icon-pelican'
+            icon: 'icon-sber'
         },
         {
             title: 'Waitre POS',
@@ -84,7 +84,8 @@ const data = {
                 'Ведущий портал рунета, посвященный каратэ, ММА и единоборствам',
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
             link: '/project3.html',
-            icon: 'icon-fb'
+            icon: '',
+            png: true
         }
     ],
     vocationCards: [
