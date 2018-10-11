@@ -1,0 +1,152 @@
+.list {
+    $_: '.list';
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    &--top-menu {
+        align-items: center;
+        padding-right: 20px;
+        #{$_}__item {
+            margin: 0 20px;
+            border-bottom: 2px solid transparent;
+            transition: ease 0.3s;
+            &:hover,
+            &.is-active {
+                border-bottom-color: $color_yellow;
+                transition: ease 0.3s;
+            }
+        }
+        #{$_}__link {
+            font-family: 'Proxima Nova Rg';
+            font-size: 15px;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: none;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+        }
+        .btn {
+        }
+    }
+    &--meta {
+        padding-bottom: 12px;
+        #{$_}__item {
+            opacity: 0.4;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            padding-right: 2px;
+        }
+    }
+    &--icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+        #{$_}__item {
+            padding-right: 0;
+            &:not(:last-child) {
+                &::after {
+                    content: '•';
+                    position: relative;
+                    padding: 0 3px;
+                }
+            }
+        }
+    }
+    &--contacts {
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        #{$_}__item {
+            font-family: 'Proxima Nova Rg';
+            font-size: 18px;
+            font-weight: normal;
+            color: #000000;
+            margin-bottom: 10px;
+            span {
+                font-weight: bold;
+                margin-right: 5px;
+            }
+        }
+    }
+    &--social-links {
+        #{$_}__item {
+            border-radius: 4px;
+            margin-right: 20px;
+            a {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.vk {
+                background: #4c6c91;
+                transition: ease 0.5s;
+                &:hover {
+                    background: darken($color: #4c6c91, $amount: 10%);
+                    transition: ease 0.5s;
+                }
+            }
+            &.tw {
+                background: #55acee;
+                transition: ease 0.5s;
+                &:hover {
+                    background: darken($color: #55acee, $amount: 10%);
+                    transition: ease 0.5s;
+                }
+            }
+            &.fb-sm {
+                background: #3b5998;
+                transition: ease 0.5s;
+                &:hover {
+                    background: darken($color: #3b5998, $amount: 10%);
+                    transition: ease 0.5s;
+                }
+            }
+        }
+    }
+    &--menu-page {
+        flex-direction: column;
+        align-items: flex-start;
+        #{$_}__item {
+            margin-bottom: 15px;
+            &.is-active,
+            &:hover {
+                #{$_}__link {
+                    &::after {
+                        content: '';
+                        background-color: #fec419;
+                    }
+                }
+            }
+        }
+        #{$_}__link {
+            font-size: 50px;
+            font-family: 'Proxima Nova Th';
+            font-weight: 800;
+            color: #000000;
+            text-decoration: none;
+            &::after {
+                content: '';
+                position: relative;
+                bottom: 8px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: transparent;
+                display: block;
+            }
+        }
+    }
+    &--menu-page-contacts {
+        opacity: 0.6;
+    }
+}
+
+@import 'list-responsive';

@@ -1,0 +1,32 @@
+.section {
+    $_: '.section';
+    @media (max-width: 1024px) {
+        // text-align: center;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &--info {
+            margin-bottom: 40px;
+            text-align: center;
+            #{$_}__title {
+                justify-content: center;
+            }
+        }
+        &--menu-page {
+            text-align: left;
+        }
+        &--slogan {
+            // margin-top: 0;
+        }
+    }
+
+    @media (max-width: 375px) {
+        margin: 75px 0;
+        &--slogan {
+            margin-top: 60px;
+        }
+    }
+}

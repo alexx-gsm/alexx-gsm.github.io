@@ -1,0 +1,19 @@
+mixin menu(data)
+  .menu
+    ul.list.list--top-menu
+      li.list__item.is-active
+        a(href='#').list__link Главная
+      li.list__item
+        a(href='#').list__link Портфолио
+      li.list__item
+        a(href='#').list__link Вакансии
+      li.list__item
+        a(href='#').list__link Контакты
+    .btn.btn--yellow
+      a(href='#').list__link Связаться
+    a(href='#')#menu-page-open.menu-btn.menu-btn--open
+      .menu-btn__img
+        != pugHelpers.Icon.call(locals, {iconName: 'icon-menu', className: 'icon icon--menu'})
+    a(href='#')#menu-page-close.menu-btn.menu-btn--close
+      .menu-btn__img
+        != pugHelpers.Icon.call(locals, {iconName: 'icon-close', className: 'icon icon--close'})

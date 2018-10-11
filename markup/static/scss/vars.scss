@@ -1,0 +1,17 @@
+div {
+    font-family: 'Proxima Nova Rg';
+    font-weight: normal;
+}
+
+$container-max-widths: (
+    sm: 460px,
+    md: 720px,
+    lg: 964px,
+    xl: 1100px,
+    xxl: 1760px
+);
+
+$container-lg-max-width: 964px;
+$container-md-max-width: 632px;
+
+$color_yellow: #fec419;

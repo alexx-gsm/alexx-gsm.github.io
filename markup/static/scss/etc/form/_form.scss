@@ -1,0 +1,61 @@
+.form {
+    $_: '.form';
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: solid 1px #cccccc;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: #000000;
+    &__title {
+        font-size: 24px;
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+        padding: 45px 50px;
+        text-align: center;
+    }
+    &__content {
+        padding: 0 50px;
+        input,
+        textarea {
+            border: none;
+            font-size: 17px;
+            font-family: 'Proxima Nova Lt';
+            font-weight: 600;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &__group {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid #fec419;
+        &:last-child {
+            margin-bottom: 5px;
+        }
+    }
+    &__label {
+        opacity: 0.5;
+        font-size: 15px;
+        font-family: 'Proxima Nova Lt';
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    &__footer {
+        position: relative;
+        bottom: -30px;
+        display: flex;
+        justify-content: center;
+    }
+    &--contact-us {
+        width: 100%;
+    }
+
+    @media (min-width: 376px) {
+        &--contact-us {
+            width: 400px;
+        }
+    }
+}

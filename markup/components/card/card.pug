@@ -1,0 +1,25 @@
+mixin card(data)
+  // START card
+  -const colorClass = data.color ? 'card--' + data.color:''
+  -const extraClass = data.type ? 'card--' + data.type:''
+  -const listClass = data.type ? 'list--' + data.type:''
+
+  .card(data-link= data.link, data-toggle="link", title="Заголовок", class= colorClass, class= extraClass)
+    .card__img
+      unless data.png
+        != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})
+      else
+        img(src=`%=static=%img/content/${data.icon}` alt="")
+    .card__content
+      .card__title= data.title
+      .card__meta
+        ul.list.list--meta(class= listClass)
+          each item in data.meta
+            li.list__item= item
+      unless data.type
+        .card__text= data.text
+      else
+        .card__action
+          != pugHelpers.Icon.call(locals, {iconName: 'icon-forward', className: 'icon icon--forward'})
+  // END card
+  

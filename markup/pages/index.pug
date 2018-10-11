@@ -1,0 +1,125 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/logo/logo.pug
+    include ../components/menu/menu.pug
+    include ../components/card/card.pug
+
+    include ../components/slogan/slogan.pug
+    include ../components/footer/footer.pug
+
+    include ../components/menu-page/menu-page.pug
+
+    head
+      +head(head.defaults)
+    body#page.page(class="page--" + head.defaults.value)
+      |%=symbols=%
+
+      // START page wrapper
+      div.page__wrapper
+        .page__img
+          .page__img-wrap
+            != pugHelpers.Icon.call(locals, {iconName: 'ivolga-bg', className: 'icon icon--ivolga'})
+        // START page header
+        header.page__header
+          +logo()
+          +menu()
+        // END page header
+
+        // START page content
+        div.page__content(id="content")
+
+          section.section.section--slogan
+            +slogan()
+          //- Projects cards
+          section.section.section--cards
+            .section__title
+              h2 Проекты
+              .btn.btn--sm.btn--yellow
+                a(href='#') Портфолио
+            .section__content.box
+              .row
+                each item,index in projectCards
+                  -const extraClass = index>2 ? 'col-xs-hide': ''
+                  .row__col.col-xs-12.col-sm-6.col-md-4(class= extraClass)
+                    +card(item)
+              a(href='#').btn.btn--mobile.btn--stroke.btn--stroke-yellow
+                span Смотреть все проекты
+                != pugHelpers.Icon.call(locals, {iconName: 'icon-forward', className: 'icon icon--forward'})
+          //- Vocation cards
+          section.section.section--icon-cards
+            .section__title
+              h2 Вакансии
+            .section__subtitle
+              span Интересных проектов становится больше, и наша команда продолжает расти. Если не нашли подходящую вакансию — 
+              a(href='/') пишите
+              span .
+            .section__content.box
+              .row
+                each item, index in vocationCards
+                  -const extraClass = index>2 ? 'col-xs-hide': ''
+                  .row__col.col-xs-12.col-sm-6.col-md-4(class= extraClass)
+                    +card(item)
+              a(href='#').btn.btn--mobile.btn--stroke.btn--stroke-yellow
+                span Смотреть все вакансии
+                != pugHelpers.Icon.call(locals, {iconName: 'icon-forward', className: 'icon icon--forward'})
+          //- 
+          .row
+            .col-md-6
+              section.section.section--info
+                .section__title
+                  h2 iVolga Technologies
+                .section__subtitle
+                  | Мы помогаем стартапам и зрелым компаниям создавать классные программные продукты
+                .section__content
+                  ul.list.list--contacts
+                    li.list__item
+                      span Телефон:
+                      | 8 920 6432721
+                    li.list__item
+                      span Email:
+                      | info@ivolga.tech
+                    li.list__item
+                      span Адрес:
+                      | Кострома, ул. Нижняя Дебря 70
+                  ul.list.list--social-links
+                    li.list__item.vk
+                      a(href='/')
+                        != pugHelpers.Icon.call(locals, {iconName: 'icon-vk', className: 'icon icon--vk'})
+                    li.list__item.tw
+                      a(href='/')
+                        != pugHelpers.Icon.call(locals, {iconName: 'icon-tw', className: 'icon icon--tw'})
+                    li.list__item.fb-sm
+                      a(href='/')
+                        != pugHelpers.Icon.call(locals, {iconName: 'icon-fb-sm', className: 'icon icon--fb-sm'})
+            .col-xs-12.col-md-6
+              .card.card--form
+                form(action="/").form.form--contact-us
+                  .form__title Свяжитесь с нами
+                  .form__content
+                    .form__group
+                      label(for='name').form__label Как вас зовут ?
+                      input#name(type="text", name="name")
+                    .form__group
+                      label(for='contact').form__label Телефон или email для связи
+                      input#contact(type="text", name="contact")
+                    .form__group
+                      label(for='message').form__label Чем мы можем вам помочь ?
+                      textarea#message(name="message", cols="30", rows="3")
+                  .form__footer
+                    button(id='send-message', type='submit').btn.btn--lg.btn--yellow Отправить
+        // END page content
+
+        // START MENU PAGE
+        +menu-page()
+        // END MENU PAGE
+      
+      // END page wrapper
+          
+
+      script(src='%=static=%js/separate-js/svg4everybody.min.js')
+      script svg4everybody();
+
+      //- Main scripts. You can replace it, but I recommend you to leave it here
+      script(src='%=static=%js/main%=hash=%%=min=%.js')

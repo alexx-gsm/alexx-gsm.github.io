@@ -1,0 +1,43 @@
+.menu {
+    $_: '.menu';
+    display: flex;
+    align-items: center;
+    &-btn {
+        width: 36px;
+        height: 36px;
+        margin-left: 20px;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &--open {
+            background-color: rgba(0, 0, 0, 0.2);
+            #{$_}-btn__img {
+                width: 18px;
+                height: 16px;
+            }
+        }
+        &--close {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.4);
+            #{$_}-btn__img {
+                width: 14px;
+                height: 16px;
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        .btn a {
+            line-height: 36px;
+        }
+    }
+    @media (min-width: 1025px) {
+        &-btn {
+            &--open {
+                display: none;
+            }
+        }
+    }
+}

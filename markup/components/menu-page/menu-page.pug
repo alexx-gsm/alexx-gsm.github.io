@@ -1,0 +1,33 @@
+mixin menu-page(data)
+  #menu-page.menu-page
+    ul.list.list--menu-page
+      li.list__item.is-active
+        a(href='#').list__link Главная
+      li.list__item
+        a(href='#').list__link Портфолио
+      li.list__item
+        a(href='#').list__link Вакансии
+      li.list__item
+        a(href='#').list__link Контакты
+    section.section.section--info.section--menu-page
+      .section__content
+        ul.list.list--contacts.list--menu-page-contacts
+          li.list__item
+            span Телефон:
+            | 8 920 6432721
+          li.list__item
+            span Email:
+            | info@ivolga.tech
+          li.list__item
+            span Адрес:
+            | Кострома, ул. Нижняя Дебря 70
+        ul.list.list--social-links
+          li.list__item.vk
+            a(href='/')
+              != pugHelpers.Icon.call(locals, {iconName: 'icon-vk', className: 'icon icon--vk'})
+          li.list__item.tw
+            a(href='/')
+              != pugHelpers.Icon.call(locals, {iconName: 'icon-tw', className: 'icon icon--tw'})
+          li.list__item.fb-sm
+            a(href='/')
+              != pugHelpers.Icon.call(locals, {iconName: 'icon-fb-sm', className: 'icon icon--fb-sm'})

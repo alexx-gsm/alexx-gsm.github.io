@@ -1,0 +1,76 @@
+.section {
+    $_: '.section';
+    margin: 40px 0;
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 19px;
+        h2 {
+            font-size: 44px;
+            font-family: 'Proxima Nova Th';
+            font-weight: 800;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__subtitle {
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #000000;
+        margin-bottom: 31px;
+        a {
+            color: #0076ff;
+            text-decoration: none;
+            transition: ease 0.3s;
+            &:hover {
+                color: darken($color: #0076ff, $amount: 10%);
+                transition: ease 0.3s;
+            }
+        }
+    }
+    &--slogan {
+        margin-bottom: 105px;
+    }
+    &--cards {
+        h2 {
+            margin-right: 15px;
+        }
+        .btn {
+            margin-top: 3px;
+        }
+        .row {
+            &__col {
+                margin-bottom: 36px;
+            }
+        }
+    }
+    &--icon-cards {
+        .row {
+            &__col {
+                margin-bottom: 57px;
+            }
+        }
+    }
+    &--info {
+        margin: 0;
+        #{$_}__subtitle {
+            margin-bottom: 40px;
+        }
+    }
+    &--menu-page {
+        #{$_}__content {
+            align-items: flex-start;
+        }
+    }
+}
+
+@import 'section-responsive';

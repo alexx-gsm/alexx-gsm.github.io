@@ -1,0 +1,17 @@
+.slogan {
+    $_: '.slogan';
+    // width: 482px;
+    // padding: 0 1rem;
+    &__title {
+        font-size: 50px;
+        font-family: 'Proxima Nova Th';
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+    }
+}
+
+@import 'slogan-responsive';
