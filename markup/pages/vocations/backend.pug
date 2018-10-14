@@ -1,0 +1,47 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../../components/head/head.pug
+    include ../../components/logo/logo.pug
+    include ../../components/menu/menu.pug
+    include ../../components/vocation/vocation.pug
+
+    include ../../components/footer/footer.pug
+
+    include ../../components/menu-page/menu-page.pug
+
+    head
+      +head(head.defaults)
+    body#page.page(class="page--" + head.defaults.value)
+      |%=symbols=%
+
+      // START page wrapper
+      div.page__wrapper
+        // START page header
+        header.page__header
+          +logo()
+          +menu(topMenu, 'Вакансии')
+        // END page header
+
+        // START page content
+        div.page__content(id="content")
+          .page__img.blur
+            .page__img-wrap
+              != pugHelpers.Icon.call(locals, {iconName: 'ivolga-bg', className: 'icon icon--ivolga'})
+          //- START VOCATION
+          +vocation(vocations.backend)         
+
+        // END page content
+
+        // START MENU PAGE
+        +menu-page(topMenu, 'Вакансии')
+        // END MENU PAGE
+      
+      // END page wrapper
+          
+
+      script(src='%=static=%js/separate-js/svg4everybody.min.js')
+      script svg4everybody();
+
+      //- Main scripts. You can replace it, but I recommend you to leave it here
+      script(src='%=static=%js/main%=hash=%%=min=%.js')

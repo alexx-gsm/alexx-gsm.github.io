@@ -32,7 +32,7 @@
         letter-spacing: normal;
         color: #000000;
     }
-    &:hover {
+    &--hover:hover {
         #{$_}__img {
             top: -5px;
             box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -97,12 +97,6 @@
             height: 150px;
             background-color: #ffffff;
         }
-        &:hover {
-            #{$_}__img {
-                top: 0;
-                box-shadow: none;
-            }
-        }
         #{$_}__content {
             display: flex;
             flex-direction: column;
@@ -131,6 +125,44 @@
     &--form {
         display: flex;
         justify-content: flex-end;
+    }
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        cursor: default;
+        #{$_}__img {
+            width: 150px;
+            height: 150px;
+            border-radius: 32px;
+            border: solid 1px #e7e7e7;
+            background-color: #ffffff;
+            margin-top: 6px;
+            margin-right: 70px;
+            flex-shrink: 0;
+        }
+        #{$_}__title {
+            font-size: 50px;
+            color: #000000;
+            font-family: 'Proxima Nova Th';
+            font-weight: 800;
+            padding: 0;
+            line-height: 1;
+        }
+        #{$_}__meta {
+            display: flex;
+            margin-top: 8px;
+            margin-bottom: 18px;
+            &-title {
+                font-size: 14px;
+                color: #0076ff;
+            }
+        }
+        #{$_}__desc {
+            font-size: 20px;
+            color: #000000;
+            line-height: 1.5;
+        }
     }
 }
 

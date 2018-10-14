@@ -4,5 +4,18 @@
         &--form {
             justify-content: center;
         }
+        &--horizontal {
+            flex-direction: column;
+            align-items: center;
+            #{$_}__img {
+                margin: 6px 0 40px;
+            }
+            #{$_}__content {
+                text-align: center;
+            }
+            #{$_}__meta {
+                justify-content: center;
+            }
+        }
     }
 }

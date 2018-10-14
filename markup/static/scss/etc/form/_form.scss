@@ -54,9 +54,110 @@
         width: 100%;
     }
 
+    &__file {
+        .label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .label-icon {
+                width: 36px;
+                height: 36px;
+                border-radius: 4px;
+                border: solid 1px #fec419;
+                background-color: rgba(254, 196, 25, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            .label-remove {
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+                border: solid 1px #fec419;
+                color: #fec419;
+                background-color: rgba(254, 196, 25, 0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                svg path {
+                    fill: currentcolor;
+                }
+                &:hover {
+                    color: #ffffff;
+                    background: #fec419;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            &.no-file + .label {
+                .label-icon,
+                .label-remove {
+                    display: none;
+                }
+            }
+
+            & + .label {
+                background: #ffffff;
+                font-size: 15px;
+                color: #000000;
+                font-family: 'Proxima Nova Rg';
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                transition: ease-in-out 0.3s;
+                cursor: default;
+                justify-content: flex-start;
+                label {
+                    flex-grow: 1;
+                    padding: 0 1rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+
+            &.no-file {
+                & + .label label {
+                    width: 100%;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 4px;
+                    border: solid 1px #fec419;
+                    cursor: pointer;
+
+                    span {
+                        flex-grow: 0;
+                        padding: 0;
+                    }
+                    &:hover {
+                        background: #fec419;
+                        transition: ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
     @media (min-width: 376px) {
         &--contact-us {
             width: 400px;
+        }
+    }
+    @media (max-width: 1024px) {
+        &__content {
+            padding: 0 30px;
         }
     }
 }

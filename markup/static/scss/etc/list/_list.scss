@@ -147,6 +147,24 @@
     &--menu-page-contacts {
         opacity: 0.6;
     }
+    &--styled {
+        flex-direction: column;
+        padding-top: 53px;
+        #{$_}__title {
+            font-size: 30px;
+            color: #000000;
+            font-family: 'Proxima Nova Th';
+            font-weight: 800;
+        }
+        #{$_}__content {
+            padding-left: 30px;
+        }
+        #{$_}__item {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #000000;
+        }
+    }
 }
 
 @import 'list-responsive';

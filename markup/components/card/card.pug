@@ -2,9 +2,10 @@ mixin card(data)
   // START card
   -const colorClass = data.color ? 'card--' + data.color:''
   -const extraClass = data.type ? 'card--' + data.type:''
+  -const hoverClass = data.hover ? 'card--hover':''
   -const listClass = data.type ? 'list--' + data.type:''
 
-  .card(data-link= data.link, data-toggle="link", title="Заголовок", class= colorClass, class= extraClass)
+  .card(data-link= data.link, data-toggle="link", title="Заголовок", class= colorClass, class= extraClass, class= hoverClass)
     .card__img
       unless data.png
         != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})

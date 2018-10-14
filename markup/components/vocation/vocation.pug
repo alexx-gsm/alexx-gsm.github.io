@@ -1,0 +1,82 @@
+mixin vocation(data)
+  //- START VOCATION
+
+  .vocation
+    .vocation__card
+      .card.card--horizontal.mt-40
+        .card__img
+          != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})
+        .card__content
+          .card__title= data.title
+          .card__meta
+            .card__meta-title Вакансия
+            ul.list.list--meta.list--icon
+              each item in data.meta
+                li.list__item= item
+          .card__desc= data.desc
+    .vocation__list
+      each list in data.lists
+        .list.list--styled
+          .list__title= list.title
+          ul.list__content
+            each item in list.content
+              li.list__item= item
+    .row.mt-100
+      .col-xs-12.col-md-6
+        section.section.section--info
+          .section__title
+            h2 Хотите попасть в команду?
+          .section__subtitle
+            | Оставьте свои контактные данные и мы свяжемся с вами.
+          .section__content
+            ul.list.list--contacts
+              li.list__item
+                span Телефон:
+                | 8 920 6432721
+              li.list__item
+                span Email:
+                | info@ivolga.tech
+              li.list__item
+                span Адрес:
+                | Кострома, ул. Нижняя Дебря 70
+            ul.list.list--social-links
+              li.list__item.vk
+                a(href='/')
+                  != pugHelpers.Icon.call(locals, {iconName: 'icon-vk', className: 'icon icon--vk'})
+              li.list__item.tw
+                a(href='/')
+                  != pugHelpers.Icon.call(locals, {iconName: 'icon-tw', className: 'icon icon--tw'})
+              li.list__item.fb-sm
+                a(href='/')
+                  != pugHelpers.Icon.call(locals, {iconName: 'icon-fb-sm', className: 'icon icon--fb-sm'})
+      .col-xs-12.col-md-6
+        .card.card--form
+          form(action="/", enctype="multipart/form-data").form.form--contact-us
+            .form__title Свяжитесь с нами
+            .form__content
+              .form__group
+                label(for='name').form__label Имя
+                input#name(type="text", name="name")
+              .form__group
+                label(for='city').form__label Город
+                input#city(type="text", name="city")
+              .form__group
+                label(for='email').form__label Email
+                input#email(type="text", name="email")
+              .form__group
+                label(for='phone').form__label Телефон
+                input#phone(type="text", name="phone")
+              .form__group
+                label(for='info').form__label О себе
+                textarea#info(name="info", cols="30", rows="3")
+              .form__file
+                input#file-2(type="file", name="file-2" class="inputfile no-file")
+                .label
+                  .label-icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'file', className: 'icon icon--file'})
+                  label(for='file-2')
+                    span Добавить файл
+                  .label-remove
+                    != pugHelpers.Icon.call(locals, {iconName: 'icon-remove', className: 'icon icon--remove'})
+            .form__footer
+              button(id='send-message', type='submit').btn.btn--lg.btn--yellow Отправить

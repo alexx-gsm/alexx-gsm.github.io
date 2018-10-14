@@ -8,7 +8,8 @@ const data = {
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
             link: '/project1.html',
             icon: 'icon-adapsys.png',
-            png: true
+            png: true,
+            hover: true
         },
         {
             title: 'Пеликан',
@@ -17,7 +18,8 @@ const data = {
                 'Образовательная платформа, которая меняет наше представление о том, как должно выглядеть образование будущего',
             meta: ['Разработка'],
             link: '/project2.html',
-            icon: 'icon-pelican'
+            icon: 'icon-pelican',
+            hover: true
         },
         {
             title: 'Игры для соцсетей',
@@ -26,7 +28,8 @@ const data = {
                 '“Общалка-трещалка”, “Мафия-рулетка”, “JackPot Club”, “Мафия-Блиц”',
             meta: ['Разработка'],
             link: '/project3.html',
-            icon: 'icon-fb'
+            icon: 'icon-fb',
+            hover: true
         },
         {
             title: 'Karate.ru',
@@ -36,7 +39,8 @@ const data = {
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
             link: '/project1.html',
             icon: 'icon-karate.png',
-            png: true
+            png: true,
+            hover: true
         },
         {
             title: 'Samsung',
@@ -45,7 +49,8 @@ const data = {
                 'Образовательный планшет. Совместный проект Samsung Россия и ИД “Просвещение”.',
             meta: ['Разработка'],
             link: '/project2.html',
-            icon: 'icon-samsung'
+            icon: 'icon-samsung',
+            hover: true
         },
         {
             title: 'GoTicket',
@@ -54,7 +59,8 @@ const data = {
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
             link: '/project3.html',
-            icon: 'go'
+            icon: 'go',
+            hover: true
         }
     ],
     portfolioCards: [
@@ -100,7 +106,7 @@ const data = {
                 'PostgreSQL',
                 'Golang'
             ],
-            link: '/project1.html',
+            link: '/vocations/backend.html',
             icon: 'backend'
         },
         {
@@ -115,7 +121,7 @@ const data = {
                 'Angular',
                 'Адаптивная верстка'
             ],
-            link: '/project2.html',
+            link: '/vocations/frontend.html',
             icon: 'frontend'
         },
         {
@@ -146,7 +152,7 @@ const data = {
                 'Контроль качества',
                 'Функциональное тестирование'
             ],
-            link: '/project2.html',
+            link: '/vocations/qa.html',
             icon: 'test'
         },
         {

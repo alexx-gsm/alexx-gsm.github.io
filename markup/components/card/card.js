@@ -6,3 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 });
+
+const cards = document.querySelectorAll('.card');
+if (cards) {
+    cards.forEach(card => {
+        const link = card.getAttribute('data-link');
+        if (link) {
+            card.addEventListener('click', e => {
+                e.preventDefault();
+                window.location.href = link;
+            });
+        }
+    });
+}
