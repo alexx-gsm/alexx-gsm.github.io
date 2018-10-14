@@ -5,6 +5,9 @@
         &--mobile {
             width: 100%;
         }
+        &--lg {
+            width: 240px;
+        }
     }
     @media (min-width: 768px) {
         &--mobile {

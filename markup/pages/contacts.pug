@@ -18,52 +18,18 @@ html(class="no-js", lang="ru")
 
       // START page wrapper
       div.page__wrapper
-        .page__img
-          .page__img-wrap
-            != pugHelpers.Icon.call(locals, {iconName: 'ivolga-bg', className: 'icon icon--ivolga'})
         // START page header
         header.page__header
           +logo()
-          +menu(topMenu, 'Главная')
+          +menu(topMenu, 'Контакты')
         // END page header
 
         // START page content
         div.page__content(id="content")
+          .page__img.blur
+            .page__img-wrap
+              != pugHelpers.Icon.call(locals, {iconName: 'ivolga-bg', className: 'icon icon--ivolga'})
 
-          section.section.section--slogan
-            +slogan()
-          //- Projects cards
-          section.section.section--cards
-            .section__title
-              h2 Проекты
-              .btn.btn--sm.btn--yellow
-                a(href='#') Портфолио
-            .section__content.box
-              .row
-                each item,index in projectCards
-                  -const extraClass = index>2 ? 'col-xs-hide': ''
-                  .row__col.col-xs-12.col-sm-6.col-md-4(class= extraClass)
-                    +card(item)
-              a(href='/portfolio.html').btn.btn--mobile.btn--stroke.btn--stroke-yellow
-                span Смотреть все проекты
-                != pugHelpers.Icon.call(locals, {iconName: 'icon-forward', className: 'icon icon--forward'})
-          //- Vocation cards
-          section.section.section--icon-cards
-            .section__title
-              h2 Вакансии
-            .section__subtitle
-              span Интересных проектов становится больше, и наша команда продолжает расти. Если не нашли подходящую вакансию — 
-              a(href='/') пишите
-              span .
-            .section__content.box
-              .row
-                each item, index in vocationCards
-                  -const extraClass = index>2 ? 'col-xs-hide': ''
-                  .row__col.col-xs-12.col-sm-6.col-md-4(class= extraClass)
-                    +card(item)
-              a(href='/vocations.html').btn.btn--mobile.btn--stroke.btn--stroke-yellow
-                span Смотреть все вакансии
-                != pugHelpers.Icon.call(locals, {iconName: 'icon-forward', className: 'icon icon--forward'})
           //- Contacts
           .row
             .col-md-6
@@ -112,7 +78,7 @@ html(class="no-js", lang="ru")
         // END page content
 
         // START MENU PAGE
-        +menu-page(topMenu, 'Главная')
+        +menu-page(topMenu, 'Контакты')
         // END MENU PAGE
       
       // END page wrapper

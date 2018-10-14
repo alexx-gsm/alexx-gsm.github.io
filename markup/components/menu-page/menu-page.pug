@@ -1,14 +1,17 @@
-mixin menu-page(data)
+mixin menu-page(data, active)
   #menu-page.menu-page
     ul.list.list--menu-page
-      li.list__item.is-active
-        a(href='#').list__link Главная
-      li.list__item
-        a(href='#').list__link Портфолио
-      li.list__item
-        a(href='#').list__link Вакансии
-      li.list__item
-        a(href='#').list__link Контакты
+      each item in data
+        li.list__item(class= active === item.title ? 'is-active':'')
+          a(href= item.link).list__link= item.title
+      //- li.list__item.is-active
+      //-   a(href='/').list__link Главная
+      //- li.list__item
+      //-   a(href='/portfolio.html').list__link Портфолио
+      //- li.list__item
+      //-   a(href='#').list__link Вакансии
+      //- li.list__item
+      //-   a(href='#').list__link Контакты
     section.section.section--info.section--menu-page
       .section__content
         ul.list.list--contacts.list--menu-page-contacts
@@ -23,11 +26,11 @@ mixin menu-page(data)
             | Кострома, ул.&nbsp;Нижняя&nbsp;Дебря&nbsp;70
         ul.list.list--social-links
           li.list__item.vk
-            a(href='/')
+            a(href='/', target='_blank')
               != pugHelpers.Icon.call(locals, {iconName: 'icon-vk', className: 'icon icon--vk'})
           li.list__item.tw
-            a(href='/')
+            a(href='/', target='_blank')
               != pugHelpers.Icon.call(locals, {iconName: 'icon-tw', className: 'icon icon--tw'})
           li.list__item.fb-sm
-            a(href='/')
+            a(href='/', target='_blank')
               != pugHelpers.Icon.call(locals, {iconName: 'icon-fb-sm', className: 'icon icon--fb-sm'})

@@ -21,7 +21,7 @@ html(class="no-js", lang="ru")
         // START page header
         header.page__header
           +logo()
-          +menu(topMenu, 'Портфолио')
+          +menu(topMenu, 'Вакансии')
         // END page header
 
         // START page content
@@ -31,19 +31,22 @@ html(class="no-js", lang="ru")
               != pugHelpers.Icon.call(locals, {iconName: 'ivolga-bg', className: 'icon icon--ivolga'})
 
           //- Projects cards
-          section.section.section--cards
+          section.section.section--icon-cards
             .section__title
-              h2 Портфолио
+              h2 Вакансии
+            .section__subtitle
+              span Интересных проектов становится больше, и наша команда продолжает расти. Если не нашли подходящую вакансию — 
+              a(href='/') пишите
+              span .
             .section__content.box
               .row
-                each item,index in [...projectCards, ...portfolioCards]
-                  -const extraClass = index>2 ? 'col-xs-hide': ''
+                each item in vocationCards
                   .row__col.col-xs-12.col-sm-6.col-md-4
                     +card(item)
         // END page content
 
         // START MENU PAGE
-        +menu-page(topMenu, 'Портфолио')
+        +menu-page(topMenu, 'Вакансии')
         // END MENU PAGE
       
       // END page wrapper
