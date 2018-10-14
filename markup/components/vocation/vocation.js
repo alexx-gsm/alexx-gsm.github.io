@@ -12,9 +12,9 @@ if (input) {
             input.classList.remove('no-file');
             document
                 .querySelector('label + .label-remove')
-                .addEventListener('click', e => {
-                    e.preventDefault();
-                    e.stopPropagation();
+                .addEventListener('click', ev => {
+                    ev.preventDefault();
+                    ev.stopPropagation();
                     input.value = '';
                     label.innerHTML = labelVal;
                     input.classList.add('no-file');
