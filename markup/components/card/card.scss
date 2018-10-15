@@ -11,6 +11,9 @@
         position: relative;
         top: 0;
         transition: ease 0.3s;
+        &.no-border {
+            border: none;
+        }
     }
     &__title {
         font-size: 19px;
@@ -140,6 +143,9 @@
             margin-top: 6px;
             margin-right: 70px;
             flex-shrink: 0;
+            &.no-border {
+                border: none;
+            }
         }
         #{$_}__title {
             font-size: 50px;

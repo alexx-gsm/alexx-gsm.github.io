@@ -58,7 +58,7 @@ const data = {
             text:
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
-            link: '/project3.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'go',
             hover: true
         }
