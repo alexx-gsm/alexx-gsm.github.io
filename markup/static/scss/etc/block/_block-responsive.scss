@@ -1,0 +1,43 @@
+.block {
+    $_: '.block';
+
+    @media (max-width: 1024px) {
+        &__title {
+            h2 {
+                font-family: 'Proxima Nova Rg';
+                font-weight: bold;
+            }
+        }
+        &__img {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        &--img {
+            &-440 {
+                #{$_}__img {
+                    max-width: 300px;
+                    &-title {
+                        max-width: 300px;
+                    }
+                    &-desc {
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__img {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &--img {
+            &-440 {
+                align-items: center;
+                &:nth-child(even) {
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

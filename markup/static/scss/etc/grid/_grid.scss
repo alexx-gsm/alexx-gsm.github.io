@@ -30,6 +30,10 @@
 .row {
     margin-left: -1rem;
     margin-right: -1rem;
+    &--out {
+        margin-left: -40px;
+        margin-right: -40px;
+    }
 }
 
 @import './grid-responsive';

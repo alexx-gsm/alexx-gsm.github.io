@@ -61,17 +61,21 @@
     }
 }
 @media (max-width: 1024px) {
-    .box {
-        // padding: 0 0.5rem;
-    }
-
     .row {
-        // margin-left: -0.5rem;
-        // margin-right: -0.5rem;
+        &--out {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
     }
 }
 @media (max-width: 767px) {
     .col-xs-hide {
         display: none;
+    }
+    .row {
+        &--out {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }

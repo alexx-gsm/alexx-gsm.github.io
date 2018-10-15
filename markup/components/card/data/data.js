@@ -6,7 +6,7 @@ const data = {
             text:
                 'Платформа Adapsys позволяет быстро и без программирования создать мобильные приложения для отелей и других компаний индустрии гостеприимства',
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
-            link: '/project1.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-adapsys.png',
             png: true,
             hover: true
@@ -17,7 +17,7 @@ const data = {
             text:
                 'Образовательная платформа, которая меняет наше представление о том, как должно выглядеть образование будущего',
             meta: ['Разработка'],
-            link: '/project2.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-pelican',
             hover: true
         },
@@ -27,7 +27,7 @@ const data = {
             text:
                 '“Общалка-трещалка”, “Мафия-рулетка”, “JackPot Club”, “Мафия-Блиц”',
             meta: ['Разработка'],
-            link: '/project3.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-fb',
             hover: true
         },
@@ -37,7 +37,7 @@ const data = {
             text:
                 'Ведущий портал рунета, посвященный каратэ, ММА и единоборствам',
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
-            link: '/project1.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-karate.png',
             png: true,
             hover: true
@@ -48,7 +48,7 @@ const data = {
             text:
                 'Образовательный планшет. Совместный проект Samsung Россия и ИД “Просвещение”.',
             meta: ['Разработка'],
-            link: '/project2.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-samsung',
             hover: true
         },
@@ -70,7 +70,7 @@ const data = {
             text:
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
-            link: '/project1.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-yandex.png',
             png: true
         },
@@ -80,7 +80,7 @@ const data = {
             text:
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
-            link: '/project2.html',
+            link: '/portfolio/go-ticket.html',
             icon: 'icon-sber'
         },
         {
@@ -89,7 +89,7 @@ const data = {
             text:
                 'Ведущий портал рунета, посвященный каратэ, ММА и единоборствам',
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
-            link: '/project3.html',
+            link: '/portfolio/go-ticket.html',
             icon: '',
             png: true
         }
@@ -134,14 +134,14 @@ const data = {
                 'Storyboard',
                 'Autolayout'
             ],
-            link: '/project3.html',
+            link: '/vocations/backend.html',
             icon: 'ios'
         },
         {
             type: 'icon',
             title: 'Android',
             meta: ['Android ndk', 'Rest,', 'Kotlin,', 'Java'],
-            link: '/project1.html',
+            link: '/vocations/frontend.html',
             icon: 'android'
         },
         {
@@ -163,7 +163,7 @@ const data = {
                 'Управление людьми',
                 'Разработка ТЗ'
             ],
-            link: '/project3.html',
+            link: '/vocations/qa.html',
             icon: 'manager'
         }
     ]
