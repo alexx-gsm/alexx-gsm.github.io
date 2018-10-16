@@ -2,7 +2,7 @@ mixin vocation(data)
   //- START VOCATION
   .vocation
     .vocation__card
-      .card.card--horizontal.mt-40
+      .card.card--header.mt-40
         .card__img
           != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})
         .card__content

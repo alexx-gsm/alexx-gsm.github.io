@@ -6,7 +6,7 @@ const data = {
             text:
                 'Платформа Adapsys позволяет быстро и без программирования создать мобильные приложения для отелей и других компаний индустрии гостеприимства',
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
-            link: '/portfolio/go-ticket.html',
+            link: '/portfolio/smart-1.html',
             icon: 'icon-adapsys.png',
             png: true,
             hover: true

@@ -1,0 +1,81 @@
+mixin project-h-cards(data)
+  -const colorClass = data.color ? 'card--' + data.color:''
+  
+  .project
+    .project__card
+      .card.card--header.mt-40(class= colorClass)
+        .card__img.no-border
+          unless data.png
+            != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})
+          else
+            img(src=`%=static=%img/content/${data.icon}` alt= data.title, title= data.title)
+        .card__content
+          .card__title Умные продажи
+          .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах. 
+    .project__card.mt-lg-154.mt-md-11
+      .card.card--h
+        .row.row--out
+          .col-xs-12.col-md-5
+            .card__img.no-border
+                img(src=`%=static=%img/content/phone-1.png` alt='Каталог товаров', title='Каталог товаров')
+          .col-xs-12.col-md-7
+            .card__content
+              .card__title Каталог товаров
+              .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах.
+      .card.card--h
+        .row.row--out
+          .col-xs-12.col-md-5
+            .card__img.no-border
+              img(src=`%=static=%img/content/phone-2.png` alt='Каталог товаров', title='Каталог товаров')
+          .col-xs-12.col-md-7
+            .card__content
+              .card__title Поиск товаров по разнообразным наборам фильтров
+              .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах.
+      .card.card--h
+        .row.row--out
+          .col-xs-12.col-md-5
+            .card__img.no-border
+                img(src=`%=static=%img/content/phone-3.png` alt='Каталог товаров', title='Каталог товаров')
+          .col-xs-12.col-md-7
+            .card__content
+              p.card__title Информация об акциях, спецпредложени<wbr>ях
+              .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах.
+      .card.card--h
+        .row.row--out
+          .col-xs-12.col-md-5
+            .card__img.no-border
+                img(src=`%=static=%img/content/phone-4.png` alt='Каталог товаров', title='Каталог товаров')
+          .col-xs-12.col-md-7
+            .card__content
+              .card__title Функционал «Отправить на email»
+              .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах.
+      .card.card--h
+        .row.row--out
+          .col-xs-12.col-md-5
+            .card__img.no-border
+                img(src=`%=static=%img/content/phone-5.png` alt='Каталог товаров', title='Каталог товаров')
+          .col-xs-12.col-md-7
+            .card__content
+              .card__title Синхронизация с сервером для актуализации цен и остатков на складе
+              .card__desc Цифровой ассистент продавца “Умные продажи” -  это мобильное приложение на Android, предназначенное для стимулирования продаж в в оффлайновых магазинах.
+    .project__block.mt-100
+      .block.block--list
+        .block__title
+          h2 Подробности
+        .list.list--styled
+          .list__title
+            h3 Цифровые ассистенты продавца
+          ul.list__content
+            li.list__item Позволяют расширить ассортимент за счет показа полной базы товаров
+            li.list__item Помогают быстрее обучать новых продавцов ассортименту и технике продаж
+            li.list__item Информируют покупателей о характеристиках и свойствах изделий
+            li.list__item Гарантируют высокое качество информации – описание товара можно снабдить поясняющим видео-контентом, хорошими фотографиями, инфографикой
+            li.list__item Это позволяет сделать консультацию продавца более наглядной и качественной
+            li.list__item Собирают контакты потенциальных клиентов. Клиент может отправлять на свой email заинтересовавшие его материалы каталога, при этом вы получите контакты клиента, даже если он не сделал заказ.
+    .project__block
+      .block.block--text
+        .block__subtitle
+          h3 Описание
+        .block__text
+          p Решение может быть реализовано как на мобильном устройстве, так и в виде стационарного терминала с большим экраном. 
+          p В рамках проекта Умные продажи мы внедрили ряд подобных решений в компаниях, торгующих  ювелирными украшениями,  мебелью, товарами для детей. 

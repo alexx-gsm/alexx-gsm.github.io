@@ -28,3 +28,13 @@ body {
 .mt-100 {
     margin-top: 6.25rem;
 }
+.mt-lg-154 {
+    @media screen and (min-width: 1025px) {
+        margin-top: 154px;
+    }
+}
+.mt-md-11 {
+    @media (min-width: 376px) and (max-width: 1024px) {
+        margin-top: 11px;
+    }
+}

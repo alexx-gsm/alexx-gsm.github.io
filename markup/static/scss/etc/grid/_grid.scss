@@ -33,6 +33,10 @@
     &--out {
         margin-left: -40px;
         margin-right: -40px;
+        [class*='col-'] {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
