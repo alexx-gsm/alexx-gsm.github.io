@@ -1,14 +1,20 @@
 mixin menu(data, active)
+  include ../modal/modal.pug
+  
+  //- START MODAL
+  +modal
+  //- END MODAL
   .menu
     ul.list.list--top-menu
       each item in data
         li.list__item(class= active === item.title ? 'is-active':'')
           a(href= item.link).list__link= item.title
     .btn.btn--yellow
-      a(href='#').list__link Связаться
+      a#modal-open(href='#').list__link Связаться
     a(href='#')#menu-page-open.menu-btn.menu-btn--open
       .menu-btn__img
         != pugHelpers.Icon.call(locals, {iconName: 'icon-menu', className: 'icon icon--menu'})
     a(href='#')#menu-page-close.menu-btn.menu-btn--close
       .menu-btn__img
         != pugHelpers.Icon.call(locals, {iconName: 'icon-close', className: 'icon icon--close'})
+  

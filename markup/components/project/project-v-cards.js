@@ -1,6 +1,6 @@
 const vCards = document.querySelectorAll('.card--v');
 
-if (vCards) {
+if (vCards.length > 0) {
     const extraClass =
         vCards.length % 3 === 1
             ? 'last-single'

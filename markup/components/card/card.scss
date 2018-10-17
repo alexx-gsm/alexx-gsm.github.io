@@ -233,6 +233,11 @@
             color: #000000;
         }
     }
+    &--modal {
+        #{$_}__title {
+            cursor: default;
+        }
+    }
 }
 
 @import 'card-responsive';

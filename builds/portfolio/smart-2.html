@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="../static/css/mainpqhvt.min.css" rel="stylesheet" type="text/css">
+        <link href="../static/css/mainwu9hxe.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -237,6 +237,33 @@
                         <use xlink:href="#logo-ivolga"></use>
                     </svg>
                 </a>
+                <div class="modal">
+                    <div class="modal__background"></div>
+                    <div class="modal__form">
+                        <div class="card card--form card--modal">
+                            <form class="form form--contact-us" action="">
+                                <div class="form__title">Свяжитесь с нами</div>
+                                <div class="form__content">
+                                    <div class="form__group">
+                                        <label class="form__label">Как вас зовут ?</label>
+                                        <input id="modal-name" type="text" name="name">
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="form__label">Телефон или email для связи</label>
+                                        <input id="modal-contact" type="text" name="contact">
+                                    </div>
+                                    <div class="form__group">
+                                        <label class="form__label">Чем мы можем вам помочь ?</label>
+                                        <textarea id="modal-message" name="message" cols="30" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__footer">
+                                    <button class="btn btn--lg btn--yellow" id="modal-send-message" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div class="menu">
                     <ul class="list list--top-menu">
                         <li class="list__item"><a class="list__link" href="/">Главная</a>
@@ -248,7 +275,7 @@
                         <li class="list__item"><a class="list__link" href="/contacts.html">Контакты</a>
                         </li>
                     </ul>
-                    <div class="btn btn--yellow"><a class="list__link" href="#">Связаться</a>
+                    <div class="btn btn--yellow"><a class="list__link" id="modal-open" href="#">Связаться</a>
                     </div>
                     <a class="menu-btn menu-btn--open" href="#" id="menu-page-open">
                         <div class="menu-btn__img">
@@ -496,7 +523,7 @@
         <!-- END page wrapper-->
 
 
-        <script src="../static/js/mainpqhvt.min.js"></script>
+        <script src="../static/js/mainwu9hxe.min.js"></script>
     </body>
 
 </html>

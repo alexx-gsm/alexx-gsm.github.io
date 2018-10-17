@@ -16,3 +16,18 @@ if (btnMenuClose) {
         page.classList.remove('show-menu');
     });
 }
+
+const btnModal = document.querySelector('#modal-open');
+const modal = document.querySelector('.modal');
+
+if (btnModal && modal) {
+    btnModal.addEventListener('click', e => {
+        e.preventDefault();
+        modal.classList.add('is-show');
+        modal
+            .querySelector('.modal__background')
+            .addEventListener('click', () => {
+                modal.classList.remove('is-show');
+            });
+    });
+}

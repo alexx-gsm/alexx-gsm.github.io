@@ -44,13 +44,16 @@
         &--h {
             #{$_}__img {
                 position: relative;
-                left: 20px;
+                left: 10px;
             }
             #{$_}__title {
                 font-size: 40px;
             }
         }
         &--v {
+            #{$_}__img {
+                left: 10px;
+            }
             #{$_}__title {
                 font-size: 28px;
             }

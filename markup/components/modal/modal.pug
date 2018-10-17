@@ -1,0 +1,19 @@
+mixin modal(data)
+  .modal
+    .modal__background
+    .modal__form
+      .card.card--form.card--modal
+        form(action="").form.form--contact-us
+          .form__title Свяжитесь с нами
+          .form__content
+            .form__group
+              label.form__label Как вас зовут ?
+              input#modal-name(type="text", name="name")
+            .form__group
+              label.form__label Телефон или email для связи
+              input#modal-contact(type="text", name="contact")
+            .form__group
+              label.form__label Чем мы можем вам помочь ?
+              textarea#modal-message(name="message", cols="30", rows="3")
+          .form__footer
+            button(id='modal-send-message', type='submit').btn.btn--lg.btn--yellow Отправить
