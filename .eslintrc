@@ -1,5 +1,4 @@
 {
-
     "root": true,
 
     "env": {
@@ -16,17 +15,16 @@
 
     "extends": "eslint:recommended",
 
-
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module"
     },
 
     "rules": {
-        "indent": [2, 4, {"SwitchCase": 1}],
+        "indent": [2, 4, { "SwitchCase": 1 }],
         "brace-style": [2, "1tbs"],
         "camelcase": [2, { "properties": "always" }],
-        "comma-spacing": [2, {"before": false, "after": true}],
+        "comma-spacing": [2, { "before": false, "after": true }],
         "comma-style": [2, "last"],
         "consistent-return": 0,
         "curly": [2, "all"],
@@ -58,7 +56,7 @@
         "no-multi-spaces": 2,
         "no-multi-str": 2,
         "no-native-reassign": 2,
-        "no-nested-ternary": 2,
+        "no-nested-ternary": 1,
         "no-new-func": 2,
         "no-new-object": 2,
         "no-new-wrappers": 2,
@@ -78,21 +76,27 @@
         "no-undef-init": 2,
         "no-undefined": 2,
         "no-unused-expressions": 2,
-        "no-unused-vars": [1, {"vars": "all", "args": "after-used"}],
+        "no-unused-vars": [1, { "vars": "all", "args": "after-used" }],
         "no-use-before-define": 2,
         "no-with": 2,
         "quotes": [2, "single"],
         "radix": 2,
         "semi": [2, "always"],
-        "semi-spacing": [2, {"before": false, "after": true}],
+        "semi-spacing": [2, { "before": false, "after": true }],
         "keyword-spacing": 2,
         "space-before-blocks": [2, "always"],
-        "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+        "space-before-function-paren": [
+            2,
+            { "anonymous": "always", "named": "never" }
+        ],
         "space-infix-ops": 2,
-        "space-unary-ops": [2, {"words": true, "nonwords": false}],
-        "spaced-comment": [2, "always", { "exceptions": ["-"]}],
+        "space-unary-ops": [2, { "words": true, "nonwords": false }],
+        "spaced-comment": [2, "always", { "exceptions": ["-"] }],
         "strict": 0,
-        "valid-jsdoc": [0, {"requireReturnDescription": false, "requireReturn": false}],
+        "valid-jsdoc": [
+            0,
+            { "requireReturnDescription": false, "requireReturn": false }
+        ],
         "wrap-iife": [2, "inside"],
         "yoda": [2, "never"],
 
@@ -106,7 +110,7 @@
         "handle-callback-err": [2, "err"],
 
         // ES6
-        "arrow-spacing": [2, {"before": true, "after": true}],
+        "arrow-spacing": [2, { "before": true, "after": true }],
         "constructor-super": 2,
         "no-confusing-arrow": 2,
         "no-class-assign": 2,

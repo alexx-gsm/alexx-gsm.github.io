@@ -50,5 +50,13 @@
                 font-size: 40px;
             }
         }
+        &--v {
+            #{$_}__title {
+                font-size: 28px;
+            }
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
     }
 }

@@ -31,6 +31,14 @@
             margin-left: 0;
             margin-right: 0;
         }
+        &--text,
+        &--list {
+            #{$_}__title {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+        }
         &--img {
             &-440 {
                 align-items: center;

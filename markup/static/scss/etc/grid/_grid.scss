@@ -38,6 +38,13 @@
             padding-right: 0;
         }
     }
+    &--variable {
+        justify-content: space-between;
+        & > div:nth-last-child(even) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 @import './grid-responsive';

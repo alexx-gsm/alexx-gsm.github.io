@@ -3,7 +3,7 @@ mixin project(data)
   
   .project
     .project__card
-      .card.card--horizontal.mt-40(class= colorClass)
+      .card.card--header.mt-40(class= colorClass)
         .card__img.no-border
           unless data.png
             != pugHelpers.Icon.call(locals, {iconName: data.icon, className: 'icon icon--'+data.icon})

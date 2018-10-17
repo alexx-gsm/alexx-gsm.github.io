@@ -25,6 +25,9 @@ body {
 .mt-40 {
     margin-top: 2.5rem;
 }
+.mt-70 {
+    margin-top: 4.375rem;
+}
 .mt-100 {
     margin-top: 6.25rem;
 }
@@ -37,4 +40,7 @@ body {
     @media (min-width: 376px) and (max-width: 1024px) {
         margin-top: 11px;
     }
+}
+.text-center {
+    text-align: center;
 }

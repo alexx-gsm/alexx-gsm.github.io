@@ -17,7 +17,7 @@ const data = {
             text:
                 'Образовательная платформа, которая меняет наше представление о том, как должно выглядеть образование будущего',
             meta: ['Разработка'],
-            link: '/portfolio/go-ticket.html',
+            link: '/portfolio/smart-2.html',
             icon: 'icon-pelican',
             hover: true
         },

@@ -66,6 +66,14 @@
             margin-left: -20px;
             margin-right: -20px;
         }
+        &--variable {
+            &.last-even {
+                & > div:nth-last-child(1) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
     }
 }
 @media (max-width: 767px) {
@@ -76,6 +84,31 @@
         &--out {
             margin-left: 0;
             margin-right: 0;
+        }
+        &--variable {
+            justify-content: center;
+        }
+    }
+}
+@media (min-width: 1025px) {
+    .row {
+        &--variable {
+            &.last-single {
+                & > div:nth-last-child(1) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            &.last-double {
+                & > div:nth-last-child(2) {
+                    margin-left: auto;
+                    margin-right: 36px;
+                }
+                & > div:nth-last-child(1) {
+                    margin-left: 36px;
+                    margin-right: auto;
+                }
+            }
         }
     }
 }

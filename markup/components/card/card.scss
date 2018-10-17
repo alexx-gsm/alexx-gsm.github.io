@@ -180,8 +180,7 @@
             justify-content: flex-start;
             // box-shadow: 20px 20px 15px 0 rgba(0, 0, 0, 0.2);
         }
-        #{$_}__content {
-        }
+
         #{$_}__title {
             font-size: 50px;
             font-family: 'Proxima Nova Rg';
@@ -203,6 +202,35 @@
             #{$_}__img {
                 justify-content: flex-end;
             }
+        }
+    }
+    &--v {
+        max-width: 300px;
+        margin-bottom: 88px;
+        #{$_}__img {
+            position: relative;
+            left: 20px;
+            height: 100%;
+        }
+        #{$_}__content {
+            text-align: center;
+        }
+        #{$_}__title {
+            font-size: 28px;
+            font-family: 'Proxima Nova Lt';
+            font-weight: 600;
+            font-style: normal;
+            line-height: 1;
+            text-align: center;
+            color: #000000;
+        }
+        #{$_}__desc {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1.4;
+            text-align: center;
+            color: #000000;
         }
     }
 }
