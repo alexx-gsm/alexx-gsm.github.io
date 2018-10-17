@@ -72,7 +72,8 @@ const data = {
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
             link: '/portfolio/go-ticket.html',
             icon: 'icon-yandex.png',
-            png: true
+            png: true,
+            hover: true
         },
         {
             title: 'Сбербанк',
@@ -81,7 +82,8 @@ const data = {
                 'Приложение для бронирования мест в ресторанах и покупки подарочных сертификатов',
             meta: ['Архитектура,', 'дизайн,', 'разработка'],
             link: '/portfolio/go-ticket.html',
-            icon: 'icon-sber'
+            icon: 'icon-sber',
+            hover: true
         },
         {
             title: 'Waitre POS',
@@ -91,7 +93,8 @@ const data = {
             meta: ['Концепция,', 'архитектура,', 'дизайн,', 'разработка'],
             link: '/portfolio/go-ticket.html',
             icon: '',
-            png: true
+            png: true,
+            hover: true
         }
     ],
     vocationCards: [
